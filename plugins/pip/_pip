@@ -21,9 +21,12 @@ _1st_arguments=(
   'freeze:output all currently installed packages (exact versions) to stdout'
   'help:show available commands'
   'install:install packages'
+  'list:List installed packages'
   'search:search PyPI'
+  'show:Show information about installed packages'
   'uninstall:uninstall packages'
   'unzip:unzip individual packages'
+  'wheel:Build wheels from your requirements'
   'zip:zip individual packages'
 )
 
