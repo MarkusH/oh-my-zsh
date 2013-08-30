@@ -27,7 +27,7 @@ source $ZSH/oh-my-zsh.sh
 # Override defaults from history-substring-search #
 # Bindings for PGUP, PGDN, HOME, END
 bindkey '\e[5~' history-substring-search-up
-bindkey '\e[6' history-substring-search-down
+bindkey '\e[6~' history-substring-search-down
 bindkey '\e[H' beginning-of-line
 bindkey '\e[F' end-of-line
 # Bindings for UP, DOWN, LEFT, RIGHT
