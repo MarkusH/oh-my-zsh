@@ -23,6 +23,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+unsetopt correctall
+
 ###################################################
 # Override defaults from history-substring-search #
 # Bindings for PGUP, PGDN, HOME, END
