@@ -41,7 +41,14 @@ bindkey '\e[D' backward-char
 
 
 export EDITOR=vim
-export PATH=$PATH:$HOME/bin:$HOME/Dropbox/bin
+
+# For fingerprint
+#xhost + >/dev/null
+
+[[ -e $HOME/.profile ]] && source $HOME/.profile
 
 alias gitl='git log --pretty=format:"%h (%cn) %s" --graph'
+alias mosh='mosh -p 2222'
+
+export PYTHONDONTWRITEBYTECODE=1
 
