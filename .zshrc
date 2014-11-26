@@ -48,6 +48,7 @@ export EDITOR=vim
 
 [[ -e $HOME/.profile ]] && source $HOME/.profile
 
+[[ -x /usr/bin/hub ]] && alias git='hub'
 alias gitl='git log --pretty=format:"%h (%cn) %s" --graph'
 alias mosh='mosh -p 2222'
 
