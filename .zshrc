@@ -14,11 +14,12 @@ setopt HIST_IGNORE_DUPS
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.venvs
 export PROJECT_HOME=$HOME/Coding
+source /usr/bin/virtualenvwrapper.sh
 
 #export CASE_SENSITIVE=true
 #export DISABLE_COLOR=true
 
-plugins=(archlinux celery django git github history-substring-search pip python screen systemd virtualenvwrapper)
+plugins=(archlinux celery django git github history-substring-search pip python screen systemd)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
