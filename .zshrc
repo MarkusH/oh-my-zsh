@@ -52,5 +52,6 @@ export EDITOR=vim
 alias gitl='git log --pretty=format:"%h (%cn) %s" --graph'
 alias mosh='mosh -p 2222'
 alias tigall='tig --all'
+alias diff='diff -u'
 
 export PYTHONDONTWRITEBYTECODE=1
