@@ -58,4 +58,4 @@ export PYTHONDONTWRITEBYTECODE=1
 
 export PATH=$PATH:$HOME/bin:$HOME/Coding/django-developer-tools:$HOME/Coding/django-developer-tools/git
 
-eval "$(direnv hook zsh)"
+[[ -x /usr/bin/direnv ]] && eval "$(direnv hook zsh)"
