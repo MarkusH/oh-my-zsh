@@ -59,3 +59,9 @@ export PYTHONDONTWRITEBYTECODE=1
 export PATH=$PATH:$HOME/bin:$HOME/Coding/django-developer-tools:$HOME/Coding/django-developer-tools/git
 
 [[ -x /usr/bin/direnv ]] && eval "$(direnv hook zsh)"
+
+function lpclone() {
+    LATERPAY_EMAIL=mholtermann@laterpay.net
+    git clone git@github.com:laterpay/$1
+    (cd $1 && git config --add user.email $LATERPAY_EMAIL)
+}
