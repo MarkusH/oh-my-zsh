@@ -53,6 +53,8 @@ alias gitl='git log --pretty=format:"%h (%cn) %s" --graph'
 alias mosh='mosh -p 2222'
 alias tigall='tig --all'
 alias diff='diff -u'
+alias ip='ip --color'
+alias ipb='ip --color --brief'
 
 export PYTHONDONTWRITEBYTECODE=1
 
