@@ -58,6 +58,7 @@ alias tigall='tig --all'
 alias diff='diff --color=auto -u'
 alias ip='ip --color'
 alias ipb='ip --color --brief'
+alias vim='nvim'
 
 export PYTHONDONTWRITEBYTECODE=1
 
