@@ -19,7 +19,7 @@ source /usr/bin/virtualenvwrapper.sh
 #export CASE_SENSITIVE=true
 #export DISABLE_COLOR=true
 
-plugins=(archlinux celery django git github history-substring-search pip python screen systemd)
+plugins=(archlinux celery django git github history-substring-search kube-ps1 pip python screen systemd)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
