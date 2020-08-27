@@ -14,6 +14,7 @@ setopt HIST_IGNORE_DUPS
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.venvs
 export PROJECT_HOME=$HOME/Coding
+export PIP_REQUIRE_VIRTUALENV=true
 source /usr/bin/virtualenvwrapper.sh
 
 #export CASE_SENSITIVE=true
@@ -59,6 +60,7 @@ alias diff='diff --color=auto -u'
 alias ip='ip --color'
 alias ipb='ip --color --brief'
 alias vim='nvim'
+alias baty='bat -l yaml'
 
 export PYTHONDONTWRITEBYTECODE=1
 
