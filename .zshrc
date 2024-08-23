@@ -14,14 +14,46 @@ setopt HIST_IGNORE_DUPS
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.venvs
 export PROJECT_HOME=$HOME/Coding
+[[ -e /usr/bin/virtualenvwrapper.sh ]] && source /usr/bin/virtualenvwrapper.sh
+
+# Node
+[[ -e /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
+
+# Docker
+export BUILDKIT_PROGRESS=plain
+export DOCKER_BUILDKIT=1
+
+# kubectl
+export KUBECONFIG=$HOME/.kube/config
+
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+# Python
 export PIP_REQUIRE_VIRTUALENV=true
-source /usr/bin/virtualenvwrapper.sh
+export PYTHONBREAKPOINT=ipdb.set_trace
+export PYTHONDONTWRITEBYTECODE=1
+
+# Rust
+export RUST_BACKTRACE=1
 
 #export CASE_SENSITIVE=true
 #export DISABLE_COLOR=true
 
-plugins=(archlinux celery django git github history-substring-search kube-ps1 pip python screen systemd)
+# plugins=(archlinux django git github history-substring-search kube-ps1 kubectl pip python screen systemd ssh-agent)
+plugins=(archlinux django git github history-substring-search kube-ps1 kubectl pip python screen systemd)
+# zstyle :omz:plugins:ssh-agent quiet yes
 source $ZSH/oh-my-zsh.sh
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# if [[ -S /run/user/1000/ssh-agent.socket ]]; then
+#     echo true
+# else
+#     echo false
+# fi
+# 
+# if [[ -x /home/markus/bin/ssh-add.sh ]]; then
+#         /home/markus/bin/ssh-add.sh > /dev/null 2>&1
+# fi
 
 # Customize to your needs...
 
@@ -41,11 +73,7 @@ bindkey '\e[C' forward-char
 bindkey '\e[D' backward-char
 ###################################################
 
-if [ -x "$(command -v nvim)" ] ; then
-    export EDITOR=nvim
-else
-    export EDITOR=vim
-fi
+export EDITOR=nvim
 
 # For fingerprint
 #xhost + >/dev/null
@@ -61,17 +89,10 @@ alias ip='ip --color'
 alias ipb='ip --color --brief'
 alias vim='nvim'
 alias baty='bat -l yaml'
-
-export PYTHONDONTWRITEBYTECODE=1
-
-export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/Coding/django-developer-tools:$HOME/Coding/django-developer-tools/git
-export KUBECONFIG=$HOME/.kube/config_shared:$HOME/.kube/config_user
+alias kubectl='DEBUG= kubectl'
 
 [[ -x /usr/bin/direnv ]] && eval "$(direnv hook zsh)"
 
-function cr8clone() {
-    CRATE_EMAIL=markus@crate.io
-    cd "$HOME/Coding/crate"
-    git clone git@github.com:crate/$1.git
-    (cd $1 && git config --add user.email $CRATE_EMAIL)
-}
+# eval "$(glab completion --shell zsh)"
+
+eval "$(starship init zsh)"
