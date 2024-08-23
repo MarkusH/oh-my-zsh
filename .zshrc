@@ -39,8 +39,7 @@ export RUST_BACKTRACE=1
 #export CASE_SENSITIVE=true
 #export DISABLE_COLOR=true
 
-# plugins=(archlinux django git github history-substring-search kube-ps1 kubectl pip python screen systemd ssh-agent)
-plugins=(archlinux django git github history-substring-search kube-ps1 kubectl pip python screen systemd)
+plugins=(archlinux git github history-substring-search kube-ps1 kubectl pip python screen systemd)
 # zstyle :omz:plugins:ssh-agent quiet yes
 source $ZSH/oh-my-zsh.sh
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
